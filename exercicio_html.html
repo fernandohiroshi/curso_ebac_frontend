@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Módulo 3</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(240, 128, 128, 0.500);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 30px;
+            font-style: none;
+            list-style: none;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .in_nome, .in_mail, .in_password{
+            padding-bottom: 20px;
+        }
+
+        .buttom_enviar {
+        
+            float: right;
+            padding: 5px;
+            margin-bottom: 38px;
+            
+        }
+
+        img {
+            padding-top: 20px;
+            width: 200px;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <img src="img/cadastro.png" alt="cadastro-img"> <br> <br> <br>
+
+    <h1>Formulario de cadastro</h1>
+
+    <form>
+       <div class="in_nome">
+           <label for="inNome">Nome :</label>
+           <input type="text" placeholder="Digite seu nome.." id="inNome" required>
+       </div>
+
+       <div class="in_mail">
+            <label for="inMail">E-Mail: </label>
+            <input type="email" placeholder="Digite seu e-mail.." id="inMail" required>
+       </div>
+
+       <div class="in_password">
+            <label for="inPass">Senha: </label>
+            <input type="password" placeholder="Digite sua senha.." id="inPass" required>
+       </div>
+
+       <input class="buttom_enviar" type="submit" value="Enviar"> 
+    </form>
+
+    
+</body>
+</html>
