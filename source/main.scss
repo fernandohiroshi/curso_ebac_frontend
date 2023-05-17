@@ -1,0 +1,128 @@
+@use '../source/config/reset.scss';
+@use '../source/config/variaveis.scss';
+
+body {
+    background-color: #f5f6fa;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: variaveis.$headerBg;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 16px;
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu {
+        display: flex;
+        padding: 16px 0;
+    }
+    
+    .menu li {
+        font-weight: bold;
+        margin-left: 24px;
+    }
+    
+    .menu li a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+section {
+    padding: 56px 0;
+
+    .products {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        width: 100%;
+    }
+
+    h4 {
+        margin-bottom: 8px;
+    }
+    .product-item img {
+        width: 100%;
+        border-radius: 16px;
+    }
+    
+    .product-button {
+        display: block;
+        background-color: variaveis.$produtoBtn;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+        transition: ease 0.25s;
+    }
+    
+    .product-button:hover {
+        background-color: variaveis.$btnHover;
+        letter-spacing: 4px;
+        transition: ease 0.5s;
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 16px;
+    }
+
+    section {
+
+        .products {
+            display: block;
+        }
+
+        .product-item img {
+            margin: 0 auto 10px;
+        }
+
+        .product-button {
+            margin: 2em auto;
+        }
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    section {
+
+        .products {
+            grid-template-columns: repeat(2, 50%);
+            width: 100%;
+        }
+    }
+
+}
+
+
+
