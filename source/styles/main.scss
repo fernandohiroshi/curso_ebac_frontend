@@ -1,0 +1,55 @@
+@use 'variaveis';
+
+body {
+    background-color: variaveis.$corBg;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 5em auto;
+        color: azure;
+
+        button {
+            padding: 10px;
+            background-color: lightblue;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 2em;
+            margin-top: 2em;
+
+            &:hover {
+                background-color: aqua;
+            }
+        }
+
+        .item {
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+            cursor: pointer;
+            transition: 2s;
+
+            &:hover {
+                max-width: 800px;
+                transition: 2s;
+            }
+        }
+
+        img {
+            width: 100%;
+            border-radius: 100%;
+            transition: 2s;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.555);
+
+            &:hover {
+                border-radius: 5%;
+                border: 5px solid aqua;
+                transition: 2s;
+                box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.888);
+            }
+        }
+    }
+}
