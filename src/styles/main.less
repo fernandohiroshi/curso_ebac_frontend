@@ -1,0 +1,143 @@
+@import 'mapas.less';
+@breakMobile: ~'(max-width: 767px)';
+@breakTablet: ~'(max-width: 1023px)';
+
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #colors[bodyBgColor];
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakMobile {
+        max-width: 70%;
+        .product {
+            display: block;
+        }
+    
+        .product-item  {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media @breakTablet {
+        max-width: 80%;
+        .container {
+            max-width: 80%;
+        }
+    
+        .product {
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
+        }
+    }
+}
+
+
+header {
+    background-color: #colors[bgHeader];
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.menu li a {
+    color: #colors[textColor];
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 4vh auto 0;
+
+    li {
+        img {
+            transition: all ease .5s;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+
+section {
+    padding: 2vh 0;
+}
+
+
+.product {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    &-img {
+        width: 100%;
+        border-radius: 16px;
+        .marginBottom8();
+    }
+
+    &-button {
+        display: block;
+        background-color: #colors[btColor];
+        color: #colors[textColor];
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #colors[btHover];
+        }
+        
+    }
+
+    .product-item h4,
+    .product-item p {
+        .marginBottom8();
+    }
+}
+
+
+
+
