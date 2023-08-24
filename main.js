@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const followingElement = document.querySelector('#following')
     const linkElement = document.querySelector('#link')
 
-    fetch('https://api.github.com/users/ogiansouza')
+    fetch('https://api.github.com/users/fernandohiroshi')
     .then(function(res) {
         return res.json()
     })
@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
         followingElement.innerText = json.following;
         followersElement.innerText = json.followers;
         repos.innerText = json.public_repos;
-        linkElement.href = json.html_url
+        linkElement.href = json.html_url //
+        
+    })
+    .catch(function(erro){
+        alert(`SITE EM MANUTENÇÃO,VOLTE MAIS TARDE`)
     })
 })
