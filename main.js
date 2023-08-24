@@ -22,6 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
     })
     .catch(function(erro){
-        alert(`SITE EM MANUTENÇÃO,VOLTE MAIS TARDE`)
+        alert(`SITE EM MANUTENÇÃO, VOLTE MAIS TARDE`)
     })
 })
