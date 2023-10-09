@@ -1,18 +1,31 @@
-function Funcionarios(nome, salario, cargo, nivel) {
+function Pokemon(nome) {
     this.nome = nome;
-    this.salario = salario;
-    this.cargo = cargo;
-    this.nivel = nivel;
 };
 
-// Funcionarios:
-const f1 = new Funcionarios('joao', 10000, 'gerente', 'senior');
-const f2 = new Funcionarios('Fernando', 8000, 'programador', 'pleno');
-const f3 = new Funcionarios('Carolina', 6000, 'designer', 'jr');
+// herdeiro 1
+function PokeInfo(nome, tipo, level) {
+    this.tipo = tipo;
+    this.level = level;
+
+    Pokemon.call(this, nome)
+};
+
+// herdeiro 2
+function PokeAttacks(nome, at1, at2, at3, at4) {
+    this.at1 = at1;
+    this.at2 = at2;
+    this.at3 = at3;
+    this.at4 = at4;
+
+    Pokemon.call(this, nome)
+};
 
 
-console.log(f1);
-console.log(f2);
-console.log(f3);
 
+const poke = new Pokemon('pikachu');
+const info = new PokeInfo('pikachu', 'eletrico', 81);
+const attacks = new PokeAttacks('pikachu', 'choque do trovao', 'esquivar', 'morder', 'surfar');
 
+console.log(poke);
+console.log(info);
+console.log(attacks);
