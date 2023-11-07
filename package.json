@@ -1,14 +1,11 @@
 {
-  "name": "ebac",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "prompt-sync": "^4.2.0"
+  "browserlsist" : "> 0.25%",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2"
   }
 }
