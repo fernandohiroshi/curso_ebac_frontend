@@ -3,7 +3,7 @@
 const multiplica = (x: number, y: number): number => x*y;
 console.log(multiplica(4, 8));
 
-function saudacao(nome: string) {
+function saudacao(nome: string): void {
     return console.log('Olá ' + nome);
 };
 saudacao('Fernando');
