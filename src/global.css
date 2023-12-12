@@ -1,0 +1,13 @@
+body {
+    background-color: pink;
+    margin-left: 4vw;
+    margin-top: 4vh;
+}
+
+input {
+    padding: 8px;
+}
+
+p {
+    font-size: 1.5em;
+}
