@@ -3,15 +3,15 @@ describe("testes agenda de contatos", () => {
     cy.visit("https://agenda-contatos-react.vercel.app/");
   });
 
-  it("verificar 3 contatos", () => {
-    cy.get(".sc-dmqHEX").should("have.length", 1);
+  it("verificar 2 contatos", () => {
+    cy.get(".sc-dmqHEX").should("have.length", 2);
   });
 
   it("verificar button edit", () => {
-    cy.get(".edit").click();
+    cy.get(".edit").first().click();
   });
 
   it("verificar button delete", () => {
-    cy.get(".delete").click();
+    cy.get(".delete").first().click();
   });
 });
